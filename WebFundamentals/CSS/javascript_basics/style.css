@@ -1,0 +1,83 @@
+/*CSS reset settings here*/
+* {
+}
+body {
+    background: #1B335D;
+    color: #C2D6EC;
+}
+p{
+    padding-bottom: 10px;
+}
+a{
+    color:#67DDE2;
+}
+ul.a {
+    margin:0 0 0 15px;
+    padding: 0px;
+}
+
+ul.b {
+    list-style-type: circle;
+    margin: 0 0 0 30px;
+    padding: 0px;
+    color: #C2D6EC;
+}
+ul {
+    margin-left:10px;
+    color: #C2D6EC;
+}
+.code{
+    color:#3D4CC5;
+}
+#wrapper{
+    width: 970px;
+    margin: 0px auto;
+    clear: both;
+    overflow: hidden;
+    }
+#header{
+    padding: 20px;
+    background-color:#CF3036;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+   }
+#header h1{
+    color: #C2D6EC;
+    }
+#navigation{
+    height: 300px;
+    width: 200px;
+    background-color:#2A7D8C;
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+    border-radius: 20px; 
+    padding: 20px;
+   }
+#navigation p{
+    padding-bottom:0px;
+    }
+#main_content{
+    width: 670px;
+    background-color: #0E1822;
+    padding: 15px;
+    display: inline-block;
+    border-radius: 20px; 
+    padding: 15px;
+    margin-bottom: 15px;
+    }
+#main_content li {
+    padding-bottom: 10px;
+}
+#footer{
+    padding: 15px;
+    width:940px;
+    vertical-align: middle;
+    background-color: #5D6673;
+    border-radius: 20px; 
+    }
+#footer p{
+    margin:0px;
+}
+   
