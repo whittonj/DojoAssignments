@@ -10,11 +10,17 @@
 p, h1, h2, h3, h4, h5, h6{
     font-family: "Arial", "Helvetica", sans-serif;
 }
+h3{
+    color:#05c1dd;
+    font-size:24px;
+}
 p{
     font-size:14px;
 }
 a{
     color:#0297ad;
+    font-family: "Arial", "Helvetica", sans-serif;
+    text-decoration: none;
 }
 hr{
     height:2px;
@@ -61,8 +67,31 @@ button{
     width:90px;
     display:inline-block;
 }
+.icon{
+    width:20px;
+}
+.phone{
+    width:40px;
+    height:40px;
+    display:inline-block;
+    padding:10px;
+}
 .blue{
     color:#26669c;
+}
+.main-img{
+    width:480px;
+    display:block;
+    margin:20px auto;
+}
+.foot-img{
+    width:140px;
+    float:left;
+    padding-right:20px;
+}
+ul{
+    margin-left:40px;
+    padding:20px 0;
 }
 .gradient{
     background: -webkit-linear-gradient(left, #88deeb , white);
@@ -75,6 +104,7 @@ button{
 #wrapper{
         width: 970px;
         margin: 0px auto;
+        padding:0px;
         }
 #header{
 }
@@ -126,46 +156,41 @@ button{
     font-weight: normal;
 }
 #main{
-    padding: 5px;
     display:inline-block;
-    width:726px;
-    background:red;
+    width: 734px;
     vertical-align: top;
 }
 #main p{
 }
 #main a{
-    color:#75a8d3;
+    color:#05c1dd;
 }
 #main h2{
-    font-size: 18px;
-    font-weight: normal;
-    background: #75a8d3;
-    padding-top:10px;
+    font-size: 24px;
+    font-weight: 700;
+    padding:10px 0;
+    color: #207cca;
 }
-#main ul{
-    text-align: center;
-    list-style-type:square;
+.breadcrumb{
+    width: 450px;
+    display:inline-block;  
+    vertical-align: top;
+    padding-top:10px;  
+}
+.contact{
+    display:inline-block;
+    width:200px;
+    text-align: right;
+    color:#474747;
+}
+.contact p{
+    font-size:11px;
 }
 #footer{
-    background: #3775aa; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#275277, #3775aa); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#275277, #3775aa); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#275277, y#3775aa); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#275277, #3775aa); /* Standard syntax */
-    text-align: center;
+    border-top:5px solid #207cca;
+    border-right:5px solid #207cca;
+    border-left:5px solid #207cca;
+    border-bottom:0px;
     margin:0;
-    height:100%;
-    }
-#footer a, #footer p{
-    color:#75a8d3;
-}
-#footer ul{
-    list-style-type: none;
-    margin: 0 20px;
-}
-#footer ul li{
-    font-size: 18px;
-    display:inline-block;
-    margin:30px 30px 0 30px;
+    padding:10px;
 }
