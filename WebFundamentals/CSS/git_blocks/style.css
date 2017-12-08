@@ -1,0 +1,98 @@
+/*CSS reset settings here*/
+* {
+    margin:0;
+    padding:0;
+}
+p, h1, h2, h3, h4, h5, h6{
+    font-family: "Courier New", Courier, monospace;
+}
+a{
+    color:#FFF;
+}
+p{
+    color:#FFF;
+    font-size: 12px;
+}
+h2{
+    color:#FFF;
+    font-size: 16px;
+    padding-bottom:10px;
+}
+.icon{
+    width:40px;
+    float:left;
+    padding-right:20px;
+}
+ul{
+    display:inline-block;
+    float:right;
+    list-style: none;
+    padding-top:10px;
+}
+ul li{
+    display:inline-block;
+    font-family: "Courier New", Courier, monospace;
+    padding-right:20px;
+}
+#wrapper{
+        width: 970px;
+        margin: 0px auto;
+        padding:20px;
+        background:#dddfd4;
+        }
+#header{
+    background:#3fb0ac;
+    padding:10px;
+    margin-bottom:10px;
+}
+#header h1{
+    display:inline-block;
+}
+#main{
+    display:inline-block;
+    background:#fae596;
+    width:970px;
+    vertical-align: top;
+}
+#sidebar{
+    width:280px;
+    background:#173f43;
+    display:inline-block;
+    padding: 10px;
+    height:100%;
+    vertical-align:top;
+    margin:10px;
+}
+#content{
+    display:inline-block;
+    width:620px;
+}
+.col-3{
+    width:164px;
+    background:#173f43;
+    margin:10px;
+    display:inline-block;
+    padding: 10px;
+    vertical-align:top;
+}
+.col-2{
+    width:268px;
+    background:#173f43;
+    margin:10px;
+    display:inline-block;
+    padding: 10px;
+    vertical-align:top;
+}
+.col-1{
+    width:580px;
+    background:#173f43;
+    margin:10px;
+    display:inline-block;
+    padding: 10px;
+    vertical-align:top;
+}
+#footer{
+    background:#3fb0ac;
+    margin-top:10px;
+    padding:10px;
+}
