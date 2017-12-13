@@ -9,6 +9,11 @@ p, h1, h2, h3, h4, h5, h6{
 a{
     color:#FFF;
 }
+body {
+    background: url(images/first_image.png) no-repeat top left,
+    url(images/second_image.png) repeat-x bottom left;
+  }
+  
 p{
     color:#FFF;
     font-size: 12px;
