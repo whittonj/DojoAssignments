@@ -17,4 +17,3 @@ function nameList(reverse,sep)
         }
     }
 }
-nameList(true,"---->")
