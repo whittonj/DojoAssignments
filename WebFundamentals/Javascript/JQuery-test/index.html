@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>JQuery Sandbox</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script type="text/javascript" src="script.js"></script>
+      <script type="text/javascript" src="jquery-3.2.1.js"></script> 
+      <meta charset="UTF-8">
+      <meta name="description" content="Option-e">
+      <script>//*jquery - can cut this out and link it back in**//
+            $(document).ready(function() {
+                $('h1').css ("color", "red");
+                $('.para1').hide(); /* .remove - completely removes it from page & code */
+                $('.para2').click (function() {
+                    $("h1").css ("color", "#333333");
+                })
+                $('h2').click (function() {
+                    $(this).fadeOut(5000, function(){ console.log("Done!")});
+                    $("body").append("<h1>Hello stuff</h1");
+                })
+                $("body").on ("click", "h1", function(){ 
+                    $("body").append("<h1>Hello stuff</h1");
+                })
+                $('h3').attr("class", "classname");
+                console.log($('h3').attr("class"));
+            })
+      </script>
+    </head>
+    <body>
+        <h1>My first title</h1>
+        <p class="para1">Lorem ipusm ajsh ajdh iiew jkhf hkk ashsdfj</p>
+        <p class="para2">Lorem ipusm ajsh ajdh iiew jkhf hkk ashsdfj</p>
+        <h1>My first title</h1>
+        <p class="para1">Lorem ipusm ajsh ajdh iiew jkhf hkk ashsdfj</p>
+        <p class="para2">Lorem ipusm ajsh ajdh iiew jkhf hkk ashsdfj</p>
+        <h2>My first title</h2>
+        <p class="para1">Lorem ipusm ajsh ajdh iiew jkhf hkk ashsdfj</p>
+        <p class="para2">Lorem ipusm ajsh ajdh iiew jkhf hkk ashsdfj</p>
+        <h2>My first title</h2>
+        <p class="para1">Lorem ipusm ajsh ajdh iiew jkhf hkk ashsdfj</p>
+        <p class="para2">Lorem ipusm ajsh ajdh iiew jkhf hkk ashsdfj</p>
+        <h3>My first title</h3>
+        <p class="para1">Lorem ipusm ajsh ajdh iiew jkhf hkk ashsdfj</p>
+        <p class="para2">Lorem ipusm ajsh ajdh iiew jkhf hkk ashsdfj</p>
+    </body>
