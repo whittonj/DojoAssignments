@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>JQuery Sandbox</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script type="text/javascript" src="jquery-3.2.1.js"></script> 
+      <script type="text/javascript" src="script.js"></script>
+      <meta charset="UTF-8">
+      <meta name="description" content="Option-e">
+    </head>
+    <body>
+        <div id = "wrapper">
+            <div id ="header">
+                <img src="jquery.png" class = "logo">
+                <h1 class="left">jQuery Sandbox</h1>
+                <p class="right">showing a bunch of jQuery functions. More at <a href="http://api.jquery.com">jQuery documentation</a></p>
+            </div>
+            <div class = "main_content">
+                <div class="left"><h1>Fade In</h1>
+                    <p>.fadeIn() - Display the matched elements by fading them to opaque. .fadeIn( [duration ] [, complete ] )</p> 
+                    <h1>Fade Out</h1>
+                    <p>.fadeOut() - Hide the matched elements by fading them to transparent.</p>                   
+                </div> 
+                <div class="right">
+                    <input type="button" class="button" value="Try Fade In">
+                    <input type="button" class="button" value="Try Fade Out">
+                    <img id="fadein" class="hidden" src="jquery.png" alt="" width="200">
+                </div>
+            </div>
+            <div class = "main_content">
+                <div class="left"><h1>Hide</h1>
+                    <p>.hide() - Hide the matched elements. </p> 
+                    <h1>Show</h1>
+                    <p>.show() -  Display the matched element.</p>                
+                </div> 
+                <div class="right">
+                    <input type="button" class="button" value="Try Hide">
+                    <input type="button" class="button" value="Try Show">
+                    <img id="hider" class="hidden" src="jquery.png" alt="" width="200">
+                </div>
+            </div>
+            <div class = "main_content">
+                <div class="left"><h1>Slide Up</h1>
+                    <p>.slideUp() - Hide the matched elements with a sliding motion.</p> 
+                    <h1>Slide Down</h1>
+                    <p>.slideDown() -  Display the matched elements with a sliding motion.</p>                      
+                </div> 
+                <div class="right">
+                    <input type="button" class="button" value="Try Slide Up">
+                    <input type="button" class="button" value="Try Slide Down">
+                    <img id="slider" class="displayed" src="jquery.png" alt="" width="200">
+                </div>  
+            </div>
+            <div class = "main_content">
+                <div class="left"><h1>Slide Toggle</h1>
+                    <p>.slideToggle() - Show or Hide the matched elements with a sliding motion.</p> 
+                </div> 
+                <div class="right">
+                    <input type="button" class="button" value="Try Slide Toggle">
+                    <img id="slidetog" class="hidden" src="jquery.png" alt="" width="200">
+                </div>
+            </div>
+            <div class = "main_content">
+                <div class="left"><h1>Toggle</h1>
+                    <p>.toggle() - Show or Hide the matched elements with a sliding.</p> 
+                </div> 
+                <div class="right">
+                    <input type="button" class="button" value="Try Toggle">
+                    <img id="toggle" class="displayed" src="aidorucat.png" alt="" width="200">
+                    <img id="toggle" class="hidden" src="heisencat.png" alt="This is a cat" width="200">
+                    </div>
+            </div>
+            <div class = "main_content">
+                    <div class="left"><h1>HTML</h1>
+                        <p>.html() - Get the HTML contents of the first element in the set of matched elements or set the HTML contents of every matched element.</p> 
+                    </div> 
+                    <div class="right">
+                        <input type="button" class="button" value="Try html">
+                        <input type="button" class="button" value="Try text">
+                        <div class = "demo"> Heelo Woorld</div>
+                    </div>
+                </div>
+            <div class = "main_content">
+                <div class="left"><h1>Before</h1>
+                    <p>.before( content [, content ] )() - Insert content, specified by the parameter, before each element in the set of matched elements.</p> 
+                </div> 
+                <div class="right">
+                    <input type="button" class="button" value="Try Before">
+                    <input type="button" class="button" value="Try After">
+                    <div class = "demo-before"> Heelo Woorld</div>
+                </div>
+            </div>
+            <div class = "main_content">
+                <div class="left"><h1>attr</h1>
+                    <p>.attr() -  Get the value of an attribute for the first element in the set of matched elements or set one or more attributes for every matched element.</p> 
+                </div> 
+                <div class="right">
+                    <input type="button" class="button" value="Try attr">
+                    <img id="cat" class="displayed" src="heisencat.png" alt="This is a cat" width="200">
+                    <p><altthis>The alt for this image is:  </altthis></p>
+                </div>
+            </div>
+            <div class = "main_content">
+                <div class="left"><h1>val</h1>
+                    <p>.val() - Get the current value of the first element in the set of matched elements or set the value of every matched element.</p> 
+                </div> 
+                <div class="right">
+                    <input type="button" class="button" value="Try val">
+                    <input type="text" id="valbox" value="click the button">
+                </div>
+            </div>
+            <div class = "main_content">
+                <div class="left"><h1>Data</h1>
+                    <p>.data() - Store arbitrary data associated with the matched elements or return the value at the named data store for the first element in the set of matched elements.</p> 
+                </div> 
+                <div class="right">
+                <body data="test">
+                    <input type="button" class="button" value="Store Data">
+                    <input type="button" class="button" value="Get Data">
+                    <div><span></span></div>
+                </div>
+            </div>
+            <div class = "main_content">
+                <div class="left"><h1>Add Class</h1>
+                    <p>.addClass - Adds the specified class(es) to each element in the set of matched elements.</p> 
+                </div> 
+                <div class="right">
+                <body data="test">
+                    <input type="button" class="button" value="Sans Serifs">
+                    <input type="button" class="button" value="Add Serifs">
+                </div>
+            </div>
+            <div class = "main_content">
+                <div class="left"><h1>Append</h1>
+                    <p>.append- Insert content, specified by the parameter, to the end of each element in the set of matched elements.</p> 
+                </div> 
+                <div class="right">
+                    <input type="button" class="button" value="Try Append">
+                </div>
+            </div>
+            <div class = "main_content">
+                    <div class="left"><h1>Click</h1>
+                        <p>.click</p> 
+                    </div> 
+                    <div class="right">
+                        <input type="button" class="button" value="DO NOT CLICK">
+                    </div>
+                </div>
+        </div>
+    </body>
