@@ -111,7 +111,10 @@ $(document).ready(function() {
       });
 
       $( ".button[value ='DO NOT CLICK']").click(function() {
-                  $( ".button" ).css( "background", "red" );
+        for (var i=10; i<500; i++) {        
+        $( ".button" ).css( "padding", i);
+        console.log(i);
+        }
       });
 
     });
