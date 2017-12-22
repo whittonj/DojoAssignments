@@ -1,0 +1,89 @@
+/*CSS reset settings here*/
+* {
+}
+
+H1{
+    font-size: 36px;
+    font-weight:100;
+    font-family: "Arial", "Helvetica", sans-serif;
+}
+H2{
+    font-size:18px;
+    font-family: "Arial", "Helvetica", sans-serif;
+}
+p{
+    font-family: "Arial", "Helvetica", sans-serif;
+}
+a{
+    color:#7ACEF4;
+}
+.button {
+    text-align: center;  
+    margin-bottom: 20px;  
+    font-family: "Arial", "Helvetica", sans-serif;
+    font-weight: normal;
+    font-size: 22px;
+    background:#333;
+    padding:10px;
+    border: 1px solid #CCC;
+    color: #FFF;
+}
+
+input[type="text"], input[type="email"], textarea {
+    padding: 10px;
+    border: 1px solid #333;
+    background:#CCC;
+    margin: 10px;
+}
+table, form{
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-family: "Arial", "Helvetica", sans-serif;
+    font-size: 18px;
+    border-radius: 4px;
+}
+.left, .right {
+    display: inline-block;
+    width: 400px;
+    vertical-align: top;
+    margin: 10px;
+}
+.card {
+    border: 1px solid #666;
+    background: #FFF;
+    box-shadow: 4px 4px #C0C0C0;
+    margin-bottom:10px;
+    padding: 10px;
+    overflow: hidden;
+}
+.card p{
+    display: none;
+}
+#wrapper{
+        width: 970px;
+        margin: 0px auto;
+        clear: both;
+        overflow: hidden;
+        background:#C0C0C0;
+        padding:10px;
+        }
+#header{
+    padding: 20px;
+    background:red;
+    color:#FFF;
+    margin-bottom:10px;
+}
+.main_content{
+    padding: 15px;
+    position:relative;
+    background:#FFF;
+    border-radius: 4px;
+    margin-bottom:10px;
+}
+
+#footer{
+    text-align: center;
+    }
+#footer a{
+    font-style: italic;
+}  
