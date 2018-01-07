@@ -35,9 +35,10 @@ $(document).on('click', '#abilities', function(){
       var idnow = $(this).attr("alt");
       console.log($(idnow));
             $.get("https://pokeapi.co/api/v2/pokemon/"+ idnow +"/", function(response) {
-            var abils =`${response.abilities[0].ability.name}`;
-            var abils2 =`${response.abilities[1].ability.name}`;
-            $(".card2").html("<p>" + abils + "</p><p>" + abils2 + "</p>");
+                       for(var i = 0; i < response.abilities.length; i++){
+                  var abils = response.abilities[i].ability.name;
+                  $('.card2').append(`<p>${abils}</p>`)
+                }
       });
 
 });});
