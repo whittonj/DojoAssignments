@@ -1,0 +1,7 @@
+pip install Django 1.11.9  - installs a packacge named Django of that version
+pip lsit shows all installed packages
+pip install Django==1.11.9 - shows that requirement is satisfied since it's already isntalled
+pip freeze - shows all the packages installed by pip but not editables.
+The file shows the versions and installed packages by pip. From what I understan it can use this info to find other dependent files
+uninstall - uninstalls the files associated 
+pip search flask - shows all the modules associated with flask you can download

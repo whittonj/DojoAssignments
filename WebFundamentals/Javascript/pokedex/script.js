@@ -28,7 +28,7 @@ $(document).on('click', 'img', function(){
             console.log($("#abilities").attr("alt"));
             $(".card").html(stats); 
             $(".card2").html("");     
-      });
+      });});
 
 $(document).on('click', '#abilities', function(){
       /*var ability = $(this).attr("abilities");   */
@@ -41,6 +41,6 @@ $(document).on('click', '#abilities', function(){
                 }
       });
 
-});});
+});
 
 });
