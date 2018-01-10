@@ -1,2 +1,2 @@
-name = "Jeff  L Whitton" 
-print name
+name = 5
+print "My name is " + name
