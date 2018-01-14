@@ -1,27 +1,21 @@
-x = ['magical','unicorns']
+list_one = [1,2,5,6,2]
+list_two = [1,2,5,6,2]
+boo= True
 
+if len(list_one) != len(list_two):
+    print "Not the same length"
+    boo = False
 
-def what(x):
-    ttl = 0
-    newstring =""
-    for i in range(0, len(x)):
-        if isinstance(x[i], int) or isinstance(x[i], float) or isinstance(x[i], long):   
-            ttl = ttl + x[i]
-        elif isinstance(x[i], str):
-            newstring = newstring + " " + x[i]
+else:
+    for i in range(0, len(list_one)):
+        if list_one[i] != list_two[i]: 
+            boo = False
+            break
+        else:
+            boo = True
 
-    if ttl > 0 and newstring == "":
-        print "All numbers"
-        print "Sum:", ttl
+if boo == True:
+    print " The lists are the same"
 
-    elif ttl > 0 and newstring != "":
-        print "Mixed"
-        print "Sum:", ttl
-        print newstring
-
-    elif ttl == 0 and newstring != "":
-        print "All wordy"
-        print newstring
-   
-
-what(x)
+else:
+    print "The lists are not the same"
