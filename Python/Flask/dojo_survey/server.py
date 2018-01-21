@@ -7,11 +7,6 @@ def root():
 
 @app.route('/results', methods=['POST'])
 def results():
-  print "Got Post Info"
-  # recall the name attributes we added to our form inputs
-  # to access the data that the user input into the fields we use request.form['name_of_input']
-  #name = request.form['name']
-  #email = request.form['location']
-  return redirect('/results')
+  return render_template('output.html', name = request.form['name'], location = request.form['location'], language = request.form['Language'], message = request.form['message'])
 
 app.run(debug=True)      # Run the app in debug mode.
