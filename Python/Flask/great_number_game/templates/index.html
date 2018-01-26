@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Guess the number</title>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"> 
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+        <meta name="description" content="Guessy">
+    </head>
+    <body>
+        <class id = "wrapper">    
+        <h1>Guess the number</h1>
+        <p><a href = "/reset" class="button">Reset/New game</a> <br></p>
+        <p class = "feedback">{{session['message']}}</p>
+        <form action='/process' method='post'>
+           <p>Guess a number between 1 and 100</p><input type='text' name='guess'>
+            <input type='submit' value='submit' class='button'>
+        </form>                                 
+       <!-- <p> Secret is {{ session['secret'] }} </p>   -->
+    </div>
+    </body>
+</html>
