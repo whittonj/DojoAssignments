@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Guess the number</title>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"> 
+        <meta name="description" content="Guessy">
+    </head>
+    <body>
+        <h1>Too low- try again</h1>  
+        <p>Your guess was {{ session['guess'] }}</p>
+        <p>The secret was {{ session['secret'] }}</p>
+        <a href = "/reset" class="button">Start or reset the game</a> 
+    </body>
+</html>

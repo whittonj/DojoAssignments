@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ninja Gold</title>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"> 
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+        <meta name="description" content="Ninja gold">
+    </head>
+    <body>
+        <div id = "wrapper">  
+            <h1>Ninja Gold</h1>
+            <p><a href = "/reset" class="button">Reset/New game</a> <br></p>
+            <p class = "feedback">Your gold: {{session['gold'] }}</p>                        
+       
+            <form action="/process" method="post" class="col-4">
+                <h2>The farm</h2>
+                <p>Earns 10-20 gold</p>
+                <input type="hidden" name="building" value="farm" >
+                <input type="submit" value="Find Gold!" class= "button">
+              </form>
+
+              <form action="/process" method="post" class="col-4">
+                <h2>The cave</h2>
+                <p>Earns 5-10 gold</p>
+                <input type="hidden" name="building" value="cave" >
+                <input type="submit" value="Find Gold!" class= "button">
+              </form>
+
+              <form action="/process" method="post" class="col-4">
+                <h2>The house</h2>
+                <p>Earns 2-5 gold</p>
+                <input type="hidden" name="building" value="house" >
+                <input type="submit" value="Find Gold!" class= "button">
+              </form>
+
+              <form action="/process" method="post" class="col-4">
+                <h2>The CASINO</h2>
+                <p>Earns/Takes 0-50 gold</p>
+                <input type="hidden" name="building" value="casino" >
+                <input type="submit" value="Find Gold!" class= "button">
+              </form>
+
+              <p class="long">{{session['message']}}</p>    
+        </div>
+    </body>
+</html>
