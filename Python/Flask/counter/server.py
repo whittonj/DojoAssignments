@@ -5,10 +5,11 @@ app.secret_key = 'ThisIsSecret'
                          
 @app.route('/')         
 def root():
-    session['counter'] = session['counter'] + 1
-    counter = session['counter']
-    print counter
-    return render_template('index.html', counter = counter)  
+    try:
+        session['counter'] += 1
+    except KeyError:
+        session['counter'] = 1
+    return render_template('index.html')  
 
 @app.route('/reset')
 def reset():
