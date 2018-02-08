@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Form</title>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"> 
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+        <meta name="description" content="Form" >
+    </head>
+    <body>
+    <div id = "wrapper">
+        <h1>Register for this account!</h1><br>
+        <p> You must have a valid email. Enter a first and last name, passwords must be 8 characters long and the pw confirm must match password.</p><br>
+        <form action='/results' method='POST'>
+            <p>email: <input type='email' name='email'></p>
+            <p>first name: <input type='text' name='first_name'></p>
+            <p>last name: <input type='text' name='last_name'></p>
+            <p>password: <input type='password' name='password'></p>
+            <p>pw confirm: <input type='password' name='pw_confirm'></p>
+            <input type='submit' value='submit' class='button'>
+        </form>
+    </div>                                 
+    </body>
+</html>

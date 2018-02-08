@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Emails</title>
+        <meta name="description" content="Results" >
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"> 
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    </head>
+    <body>
+        <div id ="wrapper">
+        <h1>Emails</h1>
+        <p class = "feedback">Welcome {{ session['first_name'] }}!</p>
+        <table>
+          <tr>
+            <th>ID</th>
+            <th>Email</th>
+        <th>First name</th>
+    <th>Last Name</th>
+<th>password</th><th>Created at</th></tr>
+        {% for emails in all_emails: %}
+        <tr><td>{{ emails['id'] }}</td>
+        <td>{{ emails['email'] }}</td>
+        <td>{{ emails['first_name'] }}</td>
+        <td>{{ emails['last_name'] }}</td>
+        <td>{{ emails['password'] }}</td>
+        <td> {{ emails['created_at'] }}</td>
+      </tr>
+      {% endfor %}
+      </table> </div>                                 
+    </body>
+</html>

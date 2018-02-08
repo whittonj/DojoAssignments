@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Output</title>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"> 
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+        <meta name="description" content="Output" >
+    </head>
+    <body>
+        <div id = "wrapper">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+              {% for message in messages %}
+                <p>{{message}}</p>
+              {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <h1>Oops!</h1>
+        <p>Please try again {{ name }}</p>    
+        <a class ="button" href = "/">Go back to form</a>                      
+    </div></body>
+</html>
