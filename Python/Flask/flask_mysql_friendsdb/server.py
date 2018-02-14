@@ -8,7 +8,7 @@ def index():
     print friends
     return render_template('index.html', all_friends = friends)
 
-@app.route('/friends', methods=['POST'])
+@app.route('/results', methods=['POST'])
 def create():
     query = "INSERT INTO friends (first_name, last_name, age, friend_since, created_at, updated_at) VALUES (:first_name, :last_name, :age, :friend_since, NOW(), NOW())"
     # We'll then create a dictionary of data from the POST data received.

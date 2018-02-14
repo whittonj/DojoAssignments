@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dunjunes & Drag Ins</title>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"> 
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Metamorphous" rel="stylesheet"> 
+        <meta name="description" content="DND">
+    </head>
+    <body>
+        <div id = "wrapper">  
+            <h1>Dunjunes & Drag-ons</h1>
+            <p><a href = "/reset" class="button">Reset/New game</a> <br></p>
+            <h2>Your name - a level {{session['lvl']}} fighter </h2>
+            <p class = "equip">XP: {{session['xp']}} </p>
+            <p class = "stats">STR:<br> {{session['str']}} / +{{session['str_mod']}}</p>
+            <p class = "stats">DEX:<br> {{session['dex']}} / +{{session['dex_mod']}}</p>
+            <p class = "stats">CON:<br> {{session['con']}} / +{{session['con_mod']}}</p>
+            <p class = "stats">WIS:<br> {{session['wis']}} / +{{session['wis_mod']}}</p>
+            <p class = "stats">INT:<br> {{session['int']}} / +{{session['int_mod']}}</p>
+            <p class = "stats">CHA:<br> {{session['cha']}} / +{{session['cha_mod']}}</p>
+            <hr>
+            <p class = "second_stats">HP (current/max): <br> {{session['hp']}} / {{session['max_hp']}}</p>
+            <p class = "second_stats">AC (current/base): <br> {{session['ac']}} / {{session['base_ac']}}</p>
+            <p class = "second_stats">AB/Damage: <br>+ {{session['ab']}} / 1-{{session['weap_dam']}} + {{session['str_mod']}}</p>
+
+            <p class = "equip">Armor: {{session['armor']}} </p>
+            <p class = "equip">Shield: {{session['shield']}} </p>
+            <p class = "equip">Weapon: {{session['weapon']}} </p>  
+            <p class = "equip">Heal potions: {{session['heal_pots']}} </p> 
+            <p class = "equip">Gold: {{session['gold']}} </p>      
+            
+            <h2>You are facing a {{session['monster']}}</h2>
+            <p class = "second_stats">{{session['monster']}} HP : <br> {{session['mon_hp']}} </p>
+            <p class = "mon">{{session['mon_man']}}</p>
+                  
+            <form action="/process" method="post" class="col-4">
+                <h2>Attack</h2>
+                <p>Take a swing with your {{session['weapon']}}</p>
+                <input type="hidden" name="action" value="attack" >
+                <input type="submit" value="Attack!" class= "button">
+              </form>
+
+              <form action="/process" method="post" class="col-4">
+                <h2>HP potion</h2>
+                <p>Drink a potion that heals 1-8hp</p>
+                <input type="hidden" name="action" value="heal" >
+                <input type="submit" value="Drink up!" class= "button">
+              </form>
+
+              <form action="/process" method="post" class="col-4">
+                <h2>Run away</h2>
+                <p>Flee like a coward</p>
+                <input type="hidden" name="action" value="run" >
+                <input type="submit" value="Flee!" class= "button">
+              </form>
+
+              <p class="long">{{session['message']}}</p>    
+        </div>
+    </body>
+</html>

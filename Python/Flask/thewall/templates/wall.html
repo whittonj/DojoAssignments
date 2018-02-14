@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Emails</title>
+        <meta name="description" content="Results" >
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"> 
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    </head>
+    <body>
+        <div id ="wrapper">
+        <h1>Messages</h1>
+        <p class = "feedback">Welcome {{ session['first_name'] }} {{session['last_name']}}! | Id: {{session['user_id']}}</p>
+        
+        <form action='/message' method='POST' id='msg_form'>
+            <textarea rows="4" cols="50" name="message" form='msg_form'>
+            </textarea>
+            <input type='submit' value='submit' class='button'>
+        {% for messages in all_messages: %}
+        <p><b>{{ messages['user_id'] }} - {{ messages['id'] }} - {{ messages['created_at'] }} - {{messages['first_name']}} {{messages['last_name']}}</b></p>
+        <p>{{ messages['messagetext'] }} </p>
+        <p>{{ messages['comment_text'] }} </p>
+        <form action='/comment' method='POST' id='comment_form'>
+            <textarea rows="2" cols="50" name="comment" form='comment_form' msgid= {{messages['id']}}>
+            </textarea>
+            <input type='submit' value='comment' class='cbutton'>
+         {% endfor %}
+         <div>  
+        <h2>{{ session[user_id] }}</h2>                             
+    </body>
+</html>

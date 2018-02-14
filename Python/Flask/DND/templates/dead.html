@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dunjunes & Drag Ins</title>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"> 
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Metamorphous" rel="stylesheet"> 
+        <meta name="description" content="DND">
+    </head>
+    <body>
+        <div id = "wrapper">  
+            <h1>Dunjunes & Drag-ons</h1>
+            <p><a href = "/reset" class="button">Reset/New game</a> <br></p>
+            <h2>Your name - a level {{session['lvl']}} fighter </h2>
+            <p class = "stats">STR:<br> {{session['str']}} / +{{session['str_mod']}}</p>
+            <p class = "stats">DEX:<br> {{session['dex']}} / +{{session['dex_mod']}}</p>
+            <p class = "stats">CON:<br> {{session['con']}} / +{{session['con_mod']}}</p>
+            <p class = "stats">WIS:<br> {{session['wis']}} / +{{session['wis_mod']}}</p>
+            <p class = "stats">INT:<br> {{session['int']}} / +{{session['int_mod']}}</p>
+            <p class = "stats">CHA:<br> {{session['cha']}} / +{{session['cha_mod']}}</p>
+            <hr>
+            <p class = "second_stats">HP (current/max): <br> {{session['hp']}} / {{session['max_hp']}}</p>
+            <p class = "second_stats">AC (current/base): <br> {{session['ac']}} / {{session['base_ac']}}</p>
+            <p class = "second_stats">AB/Damage: <br>+ {{session['ab']}} / 1-{{session['weap_dam']}} + {{session['str_mod']}}</p>
+
+            <p class = "equip">Armor: {{session['armor']}} </p>
+            <p class = "equip">Shield: {{session['shield']}} </p>
+            <p class = "equip">Weapon: {{session['weapon']}} </p>  
+            <p class = "equip">Heal potions: {{session['heal_pots']}} </p> 
+            <p class = "equip">Gold: {{session['gold']}} </p>      
+            
+            <h2>You were defeated by the {{session['monster']}}</h2>
+            <h3>May the god of death have mercy on your soul.</h3>                  
+
+              <p class="long">{{session['message']}}</p>    
+        </div>
+    </body>
+</html>
