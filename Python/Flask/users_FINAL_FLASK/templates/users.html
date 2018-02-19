@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Users</title>
+        <meta name="description" content="Users" >
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"> 
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    </head>
+    <body>
+        <div id ="wrapper">
+        <h1>Users</h1>
+        <p><a href="/users/new">Add a user</a></p>
+        <table>
+          <tr>
+            <th>ID</th>
+            <th>Email</th>
+        <th>First name</th>
+    <th>Last Name</th>
+<th>Actions</th><th>Created at</th></tr>
+        {% for emails in all_emails: %}
+        <tr><td>{{ emails['id'] }}</td>
+        <td>{{ emails['email'] }}</td>
+        <td>{{ emails['first_name'] }}</td>
+        <td>{{ emails['last_name'] }}</td>
+        <td><a href= "users/{{ emails['id'] }}">View</a></td>
+        <td> {{ emails['created_at'] }}</td>
+      </tr>
+      {% endfor %}
+      </table> </div>                                 
+    </body>
+</html>

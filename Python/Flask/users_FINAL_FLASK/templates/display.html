@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Users</title>
+        <meta name="description" content="User" >
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"> 
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    </head>
+    <body>
+        <div id ="wrapper">
+        <h1>User {{emails['id']}}</h1>
+        <p class= "button"><a href="/users/new">Add a user</a></p>
+        <p> Email: {{ emails['email'] }}</p>
+        <p>Full name: {{ emails['first_name'] }} {{ emails['last_name'] }}</p>
+        <p>Created at: {{ emails['created_at'] }}</p>                               
+    </body>
+</html>
