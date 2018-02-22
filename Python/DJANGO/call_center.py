@@ -34,10 +34,3 @@ queue_one = CallCenter()
 queue_one.add(c1)
 queue_one.add(c2)
 queue_one.info()
-
-
-
-
-
-
-
