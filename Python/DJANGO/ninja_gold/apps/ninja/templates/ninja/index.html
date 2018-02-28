@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Ninja Gold</title>
+        {% load static %}
+      <!-- The line above tells Django to be ready to listen for static files -->
+      <link rel="stylesheet" href="{% static 'ninja/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+      <!-- Put the static files in the static folder inside your app.  Django collects files within all static folders and puts them within a single folder -->    
+      </head>
+    <body>
+      <div id="wrapper">
+         
+        <h1>Ninja Gold</h1>
+        <br>
+        <h2>Gold: {{request.session.gold}}</h2>     
+        {% for item in request.session.workplace %}
+        <div class = "block">
+        <form action="/create" method="post">
+          {% csrf_token %} 
+          <h2>{{ item.0 }}</h2>
+          <p> Earn between {{ item.1 }} and {{ item.2 }} gold.</p>
+          <input type='hidden' name='goto' value='{{ item.0 }}' />
+          <input type='hidden' name='low' value='{{ item.1 }}'/>
+          <input type='hidden' name='high' value='{{ item.2 }}'/>
+          <input type="submit" value="Go here" class="button">
+        </form>
+      </div>  
+        {% endfor %}
+      
+      <p>You went to the {{request.session.goto}} and got {{request.session.new_gold}} gold.</p>
+        </div>
+    </body>
+  </html>
