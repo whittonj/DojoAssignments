@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>User view</title>
+        {% load static %}
+      <!-- The line above tells Django to be ready to listen for static files -->
+      <link rel="stylesheet" href="{% static 'user_login/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+      <!-- Put the static files in the static folder inside your app.  Django collects files within all static folders and puts them within a single folder -->    
+      </head>
+    <body><div id="wrapper">
+        <h1>Welcome</h1>
+          {% csrf_token %}   
+          <p>{{user_data.first_name}}</p>
+          <p>{{user_data.last_name}}</p>
+      
+<p>
+
+</p>
+        </body></div>
+  </html>
