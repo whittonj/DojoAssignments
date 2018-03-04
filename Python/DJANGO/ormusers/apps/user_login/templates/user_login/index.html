@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Users ORM</title>
+        {% load static %}
+      <!-- The line above tells Django to be ready to listen for static files -->
+      <link rel="stylesheet" href="{% static 'user_login/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+      <!-- Put the static files in the static folder inside your app.  Django collects files within all static folders and puts them within a single folder -->    
+      </head>
+    <body>
+      <div id="wrapper">
+         
+        <h1>Users</h1><br>
+        <table><th>ID</th><th>Full name</th><th>email</th><th>actions</th>
+        {% for user in user_list %}
+        <tr>
+          {% csrf_token %} 
+          <td>{{user.id}}</td>
+          <td>{{user.first_name}} {{user.last_name }}</td>
+          <td>{{user.email_address}}</td>
+          <td><a href=/users/{{user.id}}>show </a> <a href=/users/{{user.id}}/edit>edit </a>delete </td>
+      </tr>
+        {% endfor %}
+    </table>
+    <p><a href = "users/new">Add a new user</a></p>
+        </div>
+    </body>
+  </html>
