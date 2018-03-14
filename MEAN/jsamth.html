@@ -1,0 +1,74 @@
+<html>
+<meta charset="UTF-8">
+<body>
+    <div id="message">
+        JS Math!
+    </div> 
+<script>
+
+function zero_negativity(x) {
+    let noneg=true;
+    console.log(x);
+    for (let i =0; i < x.length; i++) {
+        console.log(x[i]);
+        if (x[i] < 0) {
+            noneg = false;
+        }
+    }
+    return noneg;
+}
+
+function is_even(x) {
+    let even =false;
+    if (x % 2 == 0) {
+        even = true;
+        }
+    else {
+        even = false;
+        }
+    return even;
+}
+
+function how_many_even(y) {
+    let even_count = 0;
+    for (let i = 0; i < y.length; i++) {
+        if (is_even(y[i]) == true) {
+            even_count = even_count + 1;
+        }
+    }
+    return even_count;
+}
+function create_dummy_array(z) {
+    let rand_array = [];
+    for (let i = 0; i < z; i++) {
+    let random_num = Math.floor(Math.random() * 10);
+    rand_array.push(random_num);
+    }
+    return rand_array;
+}
+
+function random_choice(q) {
+    let random_item = Math.floor(Math.random() * q.length);
+    let item = q[random_item];
+    return item;
+}
+
+console.log('----------------1-----------------');
+let test1 = zero_negativity([1,2,3,4]);
+console.log(test1);
+console.log('----------------2-----------------');
+let test2 = is_even(3);
+console.log(test2);
+console.log('----------------3-----------------');
+let test3 = how_many_even([1,2,3,4,6,8,10]);
+console.log(test3);
+console.log('----------------4-----------------');
+let test4 = create_dummy_array(35);
+console.log(test4);
+console.log('----------------5-----------------');
+let test5 = random_choice(["Saab", "Volvo", "BMW"]);
+console.log(test5);
+
+</script>   
+</body>
+</html>
