@@ -1,0 +1,42 @@
+<html>
+<meta charset="UTF-8">
+<body>
+    <div id="message">
+        JS Basics I!
+    </div> 
+<script>
+
+function magic_multiply(x, y){
+    let ttl="nothing";
+    if (typeof x === 'object' && x.constructor === Array) {
+        ttl = 1;
+        for (let i =0; i < x.length; i++) {
+            ttl = ttl * x[i];
+        }
+        ttl=ttl*y;
+    }
+    else if (typeof y === 'string' || typeof x === 'string') {
+        ttl = "This is a string";
+    }
+    else {
+        if (x == 0 && y==0) {
+            ttl = "Both inputs were 0"
+        }
+        else {
+            ttl = x*y;
+        }
+    }
+    return ttl;
+}
+let test1 = magic_multiply(5, 2);
+console.log(test1);
+let test2 = magic_multiply(0, 0);
+console.log(test2);
+let test3 = magic_multiply([1, 2, 3], 2);
+console.log(test3);
+let test4 = magic_multiply(7, "three");
+console.log(test4);
+
+</script>   
+</body>
+</html>
