@@ -1,0 +1,37 @@
+<html>
+<meta charset="UTF-8">
+<body>
+    <div id="message">
+        JS Basics I!
+    </div> 
+<script>
+
+function starstring(x){
+    let stars ="";
+        if (typeof x === 'string') {
+            for (let i=0; i<x.length; i++)
+            stars = stars + x.substring(0,1);
+        }
+        else {
+            for (let i =0; i<x; i++){
+            stars = stars+"*";  
+        }          
+    }
+    return stars; 
+}
+
+function drawStars(y) {
+    let starline="";
+    for (let n =0; n<y.length; n++){
+           let stars = starstring(y[n]);   
+           console.log(stars);
+    }
+}
+let test1 = starstring(3);
+console.log(test1);
+let test2 = drawStars([3,21,1, "jack", "sdfsf", 4,5]);
+
+
+</script>   
+</body>
+</html>
