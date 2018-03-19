@@ -29,11 +29,13 @@
 			character_counter = 0;
 		function updateText()
 		{
-			el.innerHTML = el.innerHTML+words[word_counter][character_counter++];
-			if (character === ' ') {
-				character = "&nbsp;" // use non-breaking space character
-			}
-			if(character_counter > words[word_counter].length)
+			var chars = words[word_counter][character_counter++];
+			if (chars === ' ') {
+				chars = "&nbsp;" // use non-breaking space character
+            }
+            
+            el.innerHTML = el.innerHTML + chars;
+			if (character_counter > words[word_counter].length)
 			{
 				word_counter++; 	//choose a different word
 				character_counter = 0;	//start over with the first character of the word

@@ -23,16 +23,13 @@
 	Coding is <div id="magic"></div>
     
   <script>
-		var words = ["a lot of fun", "about not giving up", "challenging and empowering", "creative expression", "what I learned at CodingDojo!"],
+		var words = [`a\ \lot of fun`, "about not giving up", "challenging and empowering", "creative expression", "what I learned at CodingDojo!"],
 			el = document.getElementById('magic'),
 			word_counter = 0,
 			character_counter = 0;
 		function updateText()
 		{
-			el.innerHTML = el.innerHTML+words[word_counter][character_counter++];
-			if (character === ' ') {
-				character = "&nbsp;" // use non-breaking space character
-			}
+            el.innerHTML = el.innerHTML+words[word_counter][character_counter++];
 			if(character_counter > words[word_counter].length)
 			{
 				word_counter++; 	//choose a different word

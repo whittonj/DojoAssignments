@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>Javascript Demo</title>
+	<style>
+		body {
+			background-color:black;
+			font-family: monospace;
+			color:white;
+			font-size:50px;
+			text-align: center;
+			margin-top:20%;
+		}
+		#magic{
+			color: #777;
+			border-right: 1px solid #777;
+			padding-right: 7px;
+			display: inline;
+		}
+	</style>
+</head>
+<body>
+    
+	Coding is <div id="magic"></div>
+    
+  <script>
+		const MyObjConstructor = function(name) {
+  const myPrivateVar = "Hello"; // just to show that it is hard to see this private var easily
+  this.name = name; // but you can see the name!
+  this.method = function() {
+    console.log( "I am a method");
+  };
+}
+const obj1 = new MyObjConstructor('object1');
+const obj2 = new MyObjConstructor('object2');
+console.log(obj1);
+	</script>
+</body>
+</html>
