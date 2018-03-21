@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title>Ninja_one</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<script>
+
+function Ninja(name) {
+    // create a private variable that stores a reference to the new object we create
+    const self = this;
+    const stats = {
+        health:100,
+        strength:3,
+        speed:3
+    }
+    const privateMethod = function() {
+        console.log("(got privately) " + self.name);
+    }
+    this.name = name;
+    this.health = 100;
+    this.sayName = function() {
+        console.log("My ninja name is " + this.name );
+    };
+    this.showStats = function() {
+        console.log("Health: " + stats.health);
+        console.log("Strength: " + stats.strength);
+        console.log("Speed: " + stats.speed);
+        privateMethod();
+    }
+    this.drinkSake = function() {
+        console.log("Health: " + stats.health);
+        stats.health = stats.health+10;
+        console.log("Health: " + stats.health);
+    }
+    this.punch = function(target) {
+        if (target instanceof Ninja) {
+        console.log(this.name + " punches " + target.name + " and lost 5 health");
+        target.health = target.health - 5;
+        console.log(target.health);
+        }
+        else {
+            console.log("Only a ninja can defeat a ninja");
+          }
+    }
+    this.kick = function(target) {
+        console.log(target.name + " was kicked by " + this.name + " and lost 15 health");
+        this.health = this.health - 15;
+        console.log(this.health);
+    }
+}
+const ninja1 = new Ninja("Hyabusa");
+ninja1.sayName();
+ninja1.showStats();
+ninja1.drinkSake();
+ninja1.showStats();
+
+const blueNinja = new Ninja("Goemon");
+const redNinja = new Ninja("Bill Gates");
+
+blueNinja.punch(redNinja);
+blueNinja.kick(redNinja);
+	</script>
+</body>
+</html>
