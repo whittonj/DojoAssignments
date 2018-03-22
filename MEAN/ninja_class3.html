@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title>Ninja_one</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<script>
+
+class Ninja {
+    constructor(name) {
+        this.name = name;
+        this.stats =  {
+        health:100,
+        strength:3,
+        speed:3
+        }
+    }
+    // prototype method
+    sayName() {
+        console.log("Who?");
+        console.log(`${this.name}`);
+    }
+    getStats() {
+        console.log("he is:");
+        console.log(`Health: ${this.stats.health}
+Strength: ${this.stats.strength}
+Speed: ${this.stats.speed}`);
+    }
+    drinkSake() {
+        console.log("he drinks:");
+        this.stats.health = this.stats.health+10;
+        console.log(`Health: ${this.stats.health}`);
+    }
+    // static method
+    //static getHelp() {
+    //    console.log("This is a Dot class, for created Dots! A Dot takes x and y coordinates, type 'new Dot' to create one!");
+   // }
+} 
+const ninja1 = new Ninja ("Ninja Man");
+// we can see showLocation from our instance...
+ninja1.sayName();
+ninja1.getStats();
+ninja1.drinkSake();
+//Ninja.sayName();
+// but we can't see getHelp
+//console.log(dot3.getHelp);
+// however we can call getHelp this way:
+//Dot.getHelp();
+
+
+ //   this.drinkSake = function() {
+ //       console.log("Health: " + stats.health);
+  //      stats.health = stats.health+10;
+  //      console.log("Health: " + stats.health);
+  //  }
+   
+	</script>
+</body>
+</html>
