@@ -1,0 +1,74 @@
+<html>
+<head>
+	<title>Deal cards</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<script>
+
+class Deck {
+    constructor() {
+        let deck = [];
+        const suits =['Hearts', 'Clubs', 'Spades', 'Diamonds'];
+        const values =['A',2,3,4,5,6,7,8,9,10,'J','Q','K'];
+        for (let i=0; i< suits.length; i++) {
+            for (let n=0; n<values.length;n++) {
+                deck.push(values[n] + suits[i]);
+            }
+        }
+        this.deck = deck; 
+    }  
+    
+    shuffle() {
+    console.log("shuffling------------------");
+    let currentIndex = this.deck.length, temporaryValue, randomIndex;
+        while (currentIndex) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+            temporaryValue = this.deck[currentIndex];
+            this.deck[currentIndex] = this.deck[randomIndex];
+            this.deck[randomIndex] = temporaryValue;
+        }
+        console.log(this);
+        return this;
+}
+    reset() {
+        console.log("reset-----------------");
+        this.deck = new Deck();
+    }
+    deal() {
+        console.log("dealing-----------------");
+                return this.deck.pop();
+            }
+}
+class Player {
+            constructor(name) {
+                this.name = name;
+                this.hand = [];
+            }
+
+            draw(deck) {
+                this.hand.push(deck.deal());
+                return this;
+            }
+
+            discard() {
+                this.hand.pop();
+                return this;
+            }
+        }
+
+const deck1 = new Deck();
+console.log(deck1);
+deck1.shuffle();
+console.log(deck1);
+
+ const player2 = new Player("Ronnel");
+        player2.draw(deck1).draw(deck1);
+        console.log(player2);
+        console.log(deck1);
+
+   
+	</script>
+</body>
+</html>
