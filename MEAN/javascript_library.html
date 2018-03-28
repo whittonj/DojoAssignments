@@ -1,0 +1,89 @@
+<html>
+<head>
+	<title>JavaScript Library</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<script>
+
+function each(array, callback) {
+    for (let x= 0; x<array.length; x++) {
+        callback(array[x], x);
+    }
+}
+
+const thing=['1','2','3','cat'];
+each(thing, function(element, x) {
+    console.log(`This function returned ${element} index of ${x}`);
+});
+
+each(thing, lister);
+
+function lister(array) {
+    console.log(array);
+}
+//-----------------------------------------------
+var _ = {
+    
+    map: function(array,callback) {
+    const results =[];
+    for (let i=0; i<array.length;i++) {
+        results.push(callback(array[i], i));
+    }
+    return results;
+    },
+
+    filter: function(array,callback) {
+    const results=[];
+    for (let i=0; i<array.length;i++) {
+    if (callback(array[i], i)) {
+        results.push(array[i]);
+    }
+    } 
+    return results;
+    },
+
+    reject: function (array,callback) {
+    const results =[];
+    for (let i=0; i<array.length;i++) {
+        if (!callback(array[i], i)) {
+        results.push(array[i]);
+        }   
+    }
+    return results;
+    },
+    
+    find: function (array,callabck) {
+    for (let i=0; i<array.length;i++) {
+        if (callabck(array[i], i)) {
+            return array[i];
+        }
+    }
+    },
+
+    reduce: function (array,callback, sum) {
+    const temparray = [].concat(array);
+    if (sum == undefined) {
+        sum = temparray.pop();
+    }
+    for (let i =0; i<array.length; i++) {
+        sum = callback(sum, array[i], i);
+    }
+    return sum;
+    },
+
+    add: function(num1,num2, num3) {
+    return num1 + num2 +num3;
+}
+}
+
+
+
+var evens = _.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
+console.log(evens); // if things are working right, this will return [2,4,6].
+
+
+   
+</script>
+</body>
+</html>
