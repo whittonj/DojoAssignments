@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>DojoQuery</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <meta charset="UTF-8">
+      <meta name="description" content="DojoQuery">
+    </head>
+    <body>
+        <div id = "wrapper">
+            <div id ="header">
+                <h1>Hunting Github</h1>
+            </div>
+            <div class = "main_content">
+        <script>
+                        // Here we have a function called "Outer"
+        function Fib() {
+            // There is a count variable that is scoped to the function
+            var array=[0,1];
+            var count;
+            // There is an inner function that increments count and then console.logs it
+        function nacci() {
+            var news = array[array.length -1]  + array[array.length - 2]; 
+            array.push(news);
+            count=count+1;
+            console.log(array);
+        }
+            // return the inner function! We can return a function!
+        return nacci
+        }
+        // counter is now the function returned from invoking Outer
+        var counter = Fib();
+                    // if we invoke the counter function
+        counter()     // this will console.log "1"
+        counter()     // this will console.log "2"
+        counter()     // this will console.log "3"
+        counter()     // this will console.log "4"
+        counter()     // this will console.log "4"
+        counter()     // this will console.log "4"
+        counter()     // this will console.log "4"
+        counter()     // this will console.log "4"
+            </script>>
+                    
+            </div>
+        </div>
+    </body>
+    </html>
