@@ -1,9 +1,11 @@
+//rebuild from solution
+
 const http = require('http'),
         fs = require('fs');
 
 const server = http.createServer(function(request, response) {
 
-  // SPLIT THE URL IN ORDER TO EXAMINE IT BETTER
+  // SPLIT THE URL IN ORDER TO EXAMINE IT BETTER-- get types by split....
   const splitURL = request.url.split('/'),
       fileType   = splitURL[1], // Set of characters after the first /
       file       = splitURL[2];
