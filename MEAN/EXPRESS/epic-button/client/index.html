@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The Epic Button Game</title>
+  <meta name="description" content="Epic Button Game">
+  <meta name="author" content="JW">
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.dev.js" charset="utf-8"></script>
+    <!-- added bootstrap from lecture-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+
+    <script>
+        $(document).ready(function() {
+            var socket = io.connect();
+
+            socket.on('update', function(number) {
+                $('#number').text(number);
+            });
+
+            $('#epic').click(function() {
+                socket.emit('updateClicked');
+            });
+
+             $('#reset').click(function() {
+                socket.emit('resetCount');
+            });
+        });
+    
+    </script>
+</head>
+
+<body>
+    <div class ="container">
+    <h1>Epic Number Game</h1>
+    <h2>This button has been pressed <span class = "" id = "number" >0</span> times.</h2>
+    <p>Press the button to increase counter</p>
+    <button class="btn btn-priamry" id="epic">Press Here</button> 
+    <button class="btn btn-reset" id="reset">Reset counter</button>
+
+</div>
+</body>
+</html>
