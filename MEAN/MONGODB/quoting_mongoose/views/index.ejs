@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Quoting dojo</title>
+  <meta name="description" content="Quoting Dojo">
+  <meta name="author" content="JW">
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.dev.js" charset="utf-8"></script>
+    <!-- added bootstrap from lecture-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+
+   
+</head>
+
+<body>
+    <div class ="container">
+        <!-- added link per the solution-->
+    <a href="/quotes">Go to quotes</a>
+    <h1>Create a quote</h1>
+    <form action="/quotes" method="post">
+      Name:
+      <input type="text" name='name'>
+      Quote:
+      <textarea name="quote" rows="8" cols="40"></textarea>
+      Date:
+      <input type="text" name='date'>
+      <input type="submit" value="Add my quote!">
+     
+  </form>
+  </div>
+
+</body>
+</html>
