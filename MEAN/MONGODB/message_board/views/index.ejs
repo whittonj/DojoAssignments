@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Animals</title>
+  <meta name="description" content="animals">
+  <meta name="author" content="JW">
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.dev.js" charset="utf-8"></script>
+    <!-- added bootstrap from lecture-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->   
+</head>
+<body>
+    <div class ="container">
+      <div id="top">
+        <h1>The Dojo Message Board</h1>
+      </div>
+      <form action="/message" method="post">
+        <p>Name: <input type="text" name="name">
+        <p>Message: <textarea name="message"></textarea>
+        <input id="post" type="submit" value="Post message">
+      </form>
+       <% if (typeof(errors) !== 'undefined' ) { %>
+           <% for (const key in errors) { %>
+            <h3><%= errors[key].message %></h3>
+           <% } %>
+        <% } else { %>
+          <div>
+          <% for(const message of messages) { %>
+            <div>
+              <h3>Name: <%= message.name %></h3>
+              <h3>Message: <%= message.message %></h3>
+              <% for (const comment of message._comments) { %>
+                <h5><%="Name: " + comment.name %></h5>
+                <h5><%="Comment: " + comment.text %></h5>
+              <% } %>
+    
+              <form action='/comment/<%= message._id %>' method="post">
+                <p class="margin">Name: </p><input class="comment_input" type="text" name="name">
+                <p class="margin">Comment: </p><textarea class="comment_text"name="comment"></textarea>
+                <input class="post2" type="submit" value="Post comment">
+              </form>
+            </div>
+          <% } %>
+        </div>
+       <% } %>
+  </div>
+
+</body>
+</html>
