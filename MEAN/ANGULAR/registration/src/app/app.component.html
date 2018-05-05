@@ -1,0 +1,54 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div id="wrapper">
+  <h1>
+    {{ title }}</h1>
+  <fieldset>
+    <legend>New User</legend>
+    <!-- <div class="warning" *ngIf='(!bookForm.valid)'>Please complete the form- all fields are required.</div> -->
+    <form (submit)="onSubmit()" #userForm='ngForm'>
+      <label for="">Email</label>
+      <input type="text" name="email" required minlength="4" maxlength="24" [(ngModel)]="user.email" #email='ngModel' />
+      <div class="warn" *ngIf="!email.valid"> - Required. Musr be valid email.</div>
+      <br>
+      <label for="">First name</label>
+      <input type="text" name="first_name" required [(ngModel)]="user.first_name" #first_name='ngModel' />
+      <div class="warn" *ngIf="!first_name.valid"> - Required.</div>
+      <br>
+      <label for="">Last name</label>
+      <input type="text" name="last_name" required [(ngModel)]="user.last_name" #last_name='ngModel' />
+      <div class="warn" *ngIf="!last_name.valid"> - Required.</div>
+      <br>
+      <label for="">Password</label>
+      <input type="text" name="password" required minlength="16" maxlength="16" pattern="^([a-zA-Z0-9@*#]{8,15})$" [(ngModel)]="user.password"
+        #password='ngModel' />
+      <div class="warn" *ngIf='(password.touched || password.dirty) && password.errors'>
+        <div *ngIf="password.errors.minlength"> - Required. Min length - {{ password.errors.minlength.requiredLength }} </div>
+      </div>
+      <br>
+      <label for="">Confirm password</label>
+      <input type="text" name="pwconfirm" [(ngModel)]="user.pwconfirm" #pwconfirm='ngModel' />
+      <!--<div *ngIf="pwconfirm != password " class="warn"> - Password fields must match</div>-->
+      <br>
+      <label for="">Address</label>
+      <input type="text" name="address" required [(ngModel)]="user.address" #address='ngModel' />
+      <div class="warn" *ngIf="!address.valid"> - Required.</div>
+      <br>
+      <label for="">Apartment/Ste.</label>
+      <input type="text" name="apt" maxlength="24" [(ngModel)]="user.apt" #apt='ngModel' />
+      <br>
+      <label for="">City</label>
+      <input type="text" name="city" required [(ngModel)]="user.city" #city='ngModel' />
+      <div class="warn" *ngIf="!city.valid"> - Required.</div>
+      <br>
+      <label for="">State</label>
+      <input type="state" name="state" [(ngModel)]="user.state" #state='ngModel' />
+      <br>
+      <label for="">Do you feel lucky?</label>
+      <input type="radio" name="lucky" value="yes" [(ngModel)]="user.lucky" #lucky='ngModel' />Yes
+      <input type="radio" name="lucky" value="no" [(ngModel)]="user.lucky" #lucky='ngModel' />No
+      <div class="warn" *ngIf="!lucky.valid"> - Required.</div>
+      <br>
+      <button [disabled]='userForm.invalid'>Submit</button>
+    </form>
+  </fieldset>
+</div>
