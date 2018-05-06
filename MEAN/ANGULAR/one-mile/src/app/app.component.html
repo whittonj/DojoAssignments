@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+</head>
+<div class='header'>
+  <h1>{{ title }}</h1>
+</div>
+<section>
+  <button (click)="getDistance('Yards')" [ngClass]="{selected: lastUnit === 'Yards'}">Yards</button>
+  <button (click)="getDistance('Feet')" [ngClass]="{selected: lastUnit === 'Feet'}">Feet</button>
+  <button (click)="getDistance('Inches')" [ngClass]="{selected: lastUnit === 'Inches'}">Inches</button>
+  <button (click)="getDistance('Kms')" [ngClass]="{selected: lastUnit === 'Kms'}">Kms</button>
+  <button (click)="getDistance('Meters')" [ngClass]="{selected: lastUnit === 'Meters'}">Meters</button>
+  <button (click)="getDistance('Clear')" [ngClass]="{selected: lastUnit === 'Clear'}">Clear</button>
+</section>
+<section>
+  <h1>{{ distance | number }} {{ this.lastUnit }}</h1>
+</section>
