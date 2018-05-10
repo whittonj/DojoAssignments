@@ -1,0 +1,58 @@
+<app-gold [gold]='gold'></app-gold>
+<h2>Visit a place to work</h2>
+<section>
+  <div class="block" *ngFor='let building of buildings '>
+    <h3>{{ building.name }} </h3>
+    <p>Earn {{ building.min }} - {{ building.max }} </p>
+    <button (click)='getEarnings(building)'>Go {{ building.name }}</button>
+  </div>
+</section>
+<app-log [log]='log'></app-log>
+
+<!--
+  <app-book-new (createBook)='onCreate($event)'></app-book-new>
+<section>
+  <fieldset>
+    <legend>Catalog</legend>
+    <table>
+      <thead>
+        <tr>
+          <th>ID
+            <input type="text" placeholder="id" [(ngModel)]='filter.id'>
+            <button *ngIf='filter.id' (click)='filter.id= null'>☓</button>
+          </th>
+          <th>Title
+            <input type="text" placeholder="title" [(ngModel)]='filter.title'>
+            <button *ngIf='filter.id' (click)='filter.title= null'>☓</button>
+          </th>
+          <th>Year
+            <input type="text" placeholder="year" [(ngModel)]='filter.year'>
+            <button *ngIf='filter.id' (click)='filter.year= null'>☓</button>
+          </th>
+          <th>Author
+            <input type="text" placeholder="author" [(ngModel)]='filter.author'>
+            <button *ngIf='filter.id' (click)='filter.author = null'>☓</button>
+          </th>
+          <th>Actions</th>
+          <button (click)='clearFilter()' *ngIf='filter.id || filter.title || filter.year || filter.author'>clear all</button>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let book of books | search: filter ' (click)='selectBook(book)'>
+          <td>{{ book.id }} </td>
+          <td>{{ book.title | titleize: ['of', 'then', 'and', 'the'] }} </td>
+          <td>{{ book.year }} </td>
+          <td>{{ book.author }} </td>
+          <td (click) = 'onClick($event)'>
+            <button (click)='onDelete(book)'>Delete</button>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+  </fieldset>
+</section>
+<app-book-detail [book]='selectedBook'>
+  <h2>This is the detail</h2>
+</app-book-detail>
+-->

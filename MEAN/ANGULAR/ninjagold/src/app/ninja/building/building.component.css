@@ -1,0 +1,13 @@
+.block {
+  display: inline-block;
+  width: 200px;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  padding: 10px;
+  margin-right: 5px;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
